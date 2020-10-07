@@ -11,5 +11,10 @@ su soluble -c -- "/usr/local/bin/kubectl completion bash >> /home/soluble/.kube/
 su soluble -c -- "echo 'source /home/soluble/.kube/bash_completion.sh' >> /home/soluble/.bashrc"
 
 # download the manifest for 101/II - Workloads section
-curl -Lo /home/soluble/deployment.yaml https://tamu.ctf.soluble.cloud/static/cindefella-ctf/deployment.yaml
+curl -Lo /home/soluble/deployment.yaml https://tamu.ctf.soluble.cloud/static/cinderella-ctf/deployment.yaml
 chmod 777 /home/soluble/deployment.yaml
+
+
+#Install Docker to allow user to run entire course through Cinderella
+sudo yum install -y docker
+sudo service docker start
